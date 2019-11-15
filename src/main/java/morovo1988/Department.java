@@ -22,7 +22,7 @@ public class Department {
     @OneToOne(cascade = CascadeType.ALL)
     private Lector headOfDepartment;
 
-    @ManyToMany(cascade = {CascadeType.ALL})
+    @ManyToMany(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
     @JoinTable(
             name = "departments_lectors",
             joinColumns = {@JoinColumn(name = "department_id")},
@@ -34,10 +34,6 @@ public class Department {
         this.name = name;
         this.headOfDepartment = headOfDepartment;
         this.lectors = lectors;
-    }
-
-    public void addLector(Lector lector) {
-        this.lectors.add(lector);
     }
 
 }

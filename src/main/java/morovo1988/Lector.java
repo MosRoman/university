@@ -6,15 +6,13 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name = "Lectors")
 @NoArgsConstructor
 @Data
-
+@AllArgsConstructor
 public class Lector {
 
     @Id
@@ -39,13 +37,5 @@ public class Lector {
         this.surname = surname;
         this.degree = degree;
         this.salary = salary;
-    }
-
-    @Override
-    public String toString() {
-        return "Lector " +
-                "Name='" + name + '\'' +
-                ", Surname='" + surname + '\'' +
-                ", Degree=" + degree;
     }
 }

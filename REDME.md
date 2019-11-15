@@ -1,0 +1,1 @@
+Test task to simple‌ ‌java‌ ‌project‌ ‌with‌ ‌the‌ ‌console‌ ‌interface‌ ‌for‌ ‌university
